@@ -1,0 +1,49 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--hero-background-color);
+}
+.footer-nav__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-nav__addres {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-background-color);
+}
+.footer-nav__contact {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer-nav {
+  margin-top: 20px;
+}
+
+.footer-title {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-background-color);
+  margin-bottom: 20px;
+}
+
+.footer-nav-container {
+  display: flex;
+  align-items: baseline;
+}

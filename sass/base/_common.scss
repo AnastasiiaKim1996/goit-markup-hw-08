@@ -1,0 +1,49 @@
+.list,
+.portfolio-list {
+  list-style: none;
+}
+
+.contact__link,
+.mobile-menu-contact__link,
+.link,
+.portfolio-link {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.site-nav .site-nav__link.current {
+  color: var(--accent-color);
+}
+.link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+.picture {
+  display: block;
+  max-height: 100%;
+  height: auto;
+}

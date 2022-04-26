@@ -1,0 +1,28 @@
+.social-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.social-link_theme_light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.social-link__icon {
+  fill: var(--social-icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .social-link_theme_light:hover &,
+  .social-link_theme_light:focus & {
+    fill: var(--primary-background-color);
+  }
+}

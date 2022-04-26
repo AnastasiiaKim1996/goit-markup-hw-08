@@ -1,0 +1,27 @@
+.clients-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-icon__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--social-icon-color);
+  border: 1px solid var(--social-icon-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+}
+
+.clients-icon__img {
+  fill: currentColor;
+}
