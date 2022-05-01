@@ -833,95 +833,79 @@
           <p class="contact-form-subtitle">
             Оставьте свои данные, мы вам перезвоним
           </p>
-          <label for="user-fullname" class="contact-form-field">
-            <span class="form-text-wrapper">Имя</span>
-          </label>
-          <div class="contact-field-wrapper">
-            <input
-              type="text"
-              id="user-fullname"
-              class="contact-field-wrapper__form-input"
-              name="user-name"
-              required
-              minlength="3"
-              pattern="^[а-яА-Я]+$"
-            />
-            <svg
-              class="contact-field-wrapper__form-icon"
-              width="18"
-              height="18"
-            >
-              <use href="./images/icons.svg#icon-person-form"></use>
-            </svg>
-          </div>
-          <label for="user-phone-number" class="contact-form-field"
-            ><span class="form-text-wrapper">Телефон</span>
-          </label>
-          <div class="contact-field-wrapper">
-            <input
-              type="tel"
-              id="user-phone-number"
-              class="contact-field-wrapper__form-input"
-              name="user-tel"
-              required
-            />
-            <svg
-              class="contact-field-wrapper__form-icon"
-              width="18"
-              height="18"
-            >
-              <use href="./images/icons.svg#icon-phone-form"></use>
-            </svg>
-          </div>
-          <label for="user-mail-post" class="contact-form-field"
-            ><span class="form-text-wrapper">Почта</span>
-          </label>
-          <div class="contact-field-wrapper">
-            <input
-              type="email"
-              id="user-mail-post"
-              class="contact-field-wrapper__form-input"
-              name="user-email"
-              required
-            />
-            <svg
-              class="contact-field-wrapper__form-icon"
-              width="18"
-              height="18"
-            >
-              <use href="./images/icons.svg#icon-email-form"></use>
-            </svg>
-          </div>
-
-          <label class="contact-form-field">
-            <span class="form-text-wrapper"> Комментарий</span>
-            <textarea
-              class="contact-form-text"
-              name="user-textarea"
-              placeholder="Введите текст"
-            ></textarea>
-          </label>
-
-          <div class="contact-form-checkbox-wrapper">
-            <input
-              name="accept-policy"
-              type="checkbox"
-              class="contact-form-checkbox visually-hidden"
-              id="accept-policy-checkbox"
-              required
-            />
-            <label
-              for="accept-policy-checkbox"
-              class="contact-form-checkbox-text"
-              >Соглашаюсь с рассылкой и принимаю&nbsp;
-              <a href="" class="checkbox-text-link">Условия договора</a>
-            </label>
-          </div>
-
-          <button type="submit" class="contact-form-submit-btn">
-            Отправить
-          </button>
         </form>
+        <label for="user-fullname" class="contact-form-field">
+          <span class="form-text-wrapper">Имя</span>
+        </label>
+        <div class="contact-field-wrapper">
+          <input
+            type="text"
+            id="user-fullname"
+            class="contact-field-wrapper__form-input"
+            name="user-name"
+            required
+            minlength="3"
+            pattern="^[а-яА-Я]+$"
+          />
+          <svg class="contact-field-wrapper__form-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-person-form"></use>
+          </svg>
+        </div>
+        <label for="user-phone-number" class="contact-form-field"
+          ><span class="form-text-wrapper">Телефон</span>
+        </label>
+        <div class="contact-field-wrapper">
+          <input
+            type="tel"
+            id="user-phone-number"
+            class="contact-field-wrapper__form-input"
+            name="user-tel"
+            required
+          />
+          <svg class="contact-field-wrapper__form-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-phone-form"></use>
+          </svg>
+        </div>
+        <label for="user-mail-post" class="contact-form-field"
+          ><span class="form-text-wrapper">Почта</span>
+        </label>
+        <div class="contact-field-wrapper">
+          <input
+            type="email"
+            id="user-mail-post"
+            class="contact-field-wrapper__form-input"
+            name="user-email"
+            required
+          />
+          <svg class="contact-field-wrapper__form-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-email-form"></use>
+          </svg>
+        </div>
+
+        <label class="contact-form-field">
+          <span class="form-text-wrapper"> Комментарий</span>
+          <textarea
+            class="contact-form-text"
+            name="user-textarea"
+            placeholder="Введите текст"
+          ></textarea>
+        </label>
+
+        <div class="contact-form-checkbox-wrapper">
+          <input
+            name="accept-policy"
+            type="checkbox"
+            class="contact-form-checkbox visually-hidden"
+            id="accept-policy-checkbox"
+            required
+          />
+          <label for="accept-policy-checkbox" class="contact-form-checkbox-text"
+            >Соглашаюсь с рассылкой и принимаю&nbsp;
+            <a href="" class="checkbox-text-link">Условия договора</a>
+          </label>
+        </div>
+
+        <button type="submit" class="contact-form-submit-btn">Отправить</button>
       </div>
     </div>
 

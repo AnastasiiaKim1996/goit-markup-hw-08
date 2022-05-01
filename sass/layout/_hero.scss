@@ -25,6 +25,7 @@
 
 .modal-button {
   @include modal_btn();
+  display: flex;
   text-align: center;
   min-width: 200px;
   border-radius: 4px;

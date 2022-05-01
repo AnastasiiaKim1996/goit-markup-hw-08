@@ -61,7 +61,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .contact-field-wrapper {
@@ -145,8 +145,6 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  display: flex;
-  align-items: center;
 
   &::before {
     content: "";
@@ -176,7 +174,7 @@
 }
 .contact-form-submit-btn {
   @include modal_btn();
-  justify-content: center;
+  display: block;
   width: 200px;
   height: 50px;
   border-radius: 4px;
@@ -193,7 +191,7 @@
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
-    height: 581px;
+    height: 600px;
   }
   .contact-form-checkbox-text {
     font-weight: 400;
@@ -206,8 +204,9 @@
     }
     .contact-form-checkbox-text {
       &::before {
+        content: "";
         margin-left: 12px;
-        margin-right: 9px;
+        margin-right: 4px;
       }
     }
   }

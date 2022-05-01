@@ -425,7 +425,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .contact-field-wrapper {
@@ -512,8 +512,6 @@ img {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  display: flex;
-  align-items: center;
 }
 
 .contact-form-checkbox-text::before {
@@ -524,7 +522,7 @@ img {
   border-radius: 2px;
   border: 2px solid var(--title-text-color);
   cursor: pointer;
-  margin-right: 9px;
+  margin-right: 4px;
 }
 
 .contact-form-checkbox:focus + .contact-form-checkbox-text::before {
@@ -548,7 +546,6 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
   align-items: center;
   letter-spacing: 0.06em;
   color: var(--primary-background-color);
@@ -558,7 +555,7 @@ img {
   margin-right: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  justify-content: center;
+  display: block;
   width: 200px;
   height: 50px;
   border-radius: 4px;
@@ -573,8 +570,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
+    height: 600px;
   }
   .contact-form-checkbox-text {
     font-weight: 400;
@@ -586,7 +583,9 @@ img {
     line-height: 1.14;
   }
   .contact-form-checkbox-text .contact-form-checkbox-text::before {
+    content: "";
     margin-left: 12px;
+    margin-right: 4px;
   }
 }
 
@@ -1352,7 +1351,6 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
   align-items: center;
   letter-spacing: 0.06em;
   color: var(--primary-background-color);
@@ -1362,6 +1360,7 @@ img {
   margin-right: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
   text-align: center;
   min-width: 200px;
   border-radius: 4px;
