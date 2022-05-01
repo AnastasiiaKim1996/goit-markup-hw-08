@@ -156,7 +156,7 @@
     border-radius: 2px;
     border: 2px solid var(--title-text-color);
     cursor: pointer;
-    margin-right: 9px;
+    margin-right: 4px;
 
     .contact-form-checkbox:focus + & {
       outline: 1px solid var(--accent-color);
@@ -207,6 +207,7 @@
     .contact-form-checkbox-text {
       &::before {
         margin-left: 12px;
+        margin-right: 9px;
       }
     }
   }
