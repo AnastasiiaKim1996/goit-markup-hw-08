@@ -132,13 +132,16 @@
 }
 
 .contact-form-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 .contact-form-checkbox-text {
   font-family: inherit;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
@@ -153,7 +156,6 @@
     border: 2px solid var(--title-text-color);
     cursor: pointer;
     margin-right: 9px;
-    margin-left: 12px;
 
     .contact-form-checkbox:focus + & {
       outline: 1px solid var(--accent-color);
@@ -191,5 +193,20 @@
   .modal {
     width: 528px;
     height: 581px;
+  }
+  .contact-form-checkbox-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.9;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+    .contact-form-checkbox-text {
+      &::before {
+        margin-left: 12px;
+      }
+    }
   }
 }

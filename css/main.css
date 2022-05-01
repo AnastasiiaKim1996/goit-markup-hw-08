@@ -116,18 +116,19 @@ ol {
 
 @media screen and (max-width: 767px) {
   .portfolio-list {
+    margin-right: 8px;
     margin-bottom: 15px;
+    flex-basis: calc((100% - (2 * 8px)) / 3);
   }
   .button-navigation {
     justify-content: start;
-    margin-bottom: 40px;
+    margin-right: -8px;
+    margin-bottom: -15px;
   }
 }
 
-.button-navigation .portfolio-list:not(:last-child) {
-  margin-right: 8px;
-}
-
+ul
+li
 .portfolio-button-nav {
   font-family: inherit;
   font-weight: 500;
@@ -145,7 +146,11 @@ ol {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-button-nav:hover, .portfolio-button-nav:focus {
+ul
+li
+.portfolio-button-nav:hover, ul
+li
+.portfolio-button-nav:focus {
   color: var(--primary-background-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -173,6 +178,7 @@ ol {
 .social-icon {
   display: flex;
   justify-content: space-between;
+  justify-content: center;
 }
 
 .social-link_theme_light {
@@ -380,7 +386,8 @@ ol {
 
 .modal {
   position: absolute;
-  width: 528px;
+  width: 450px;
+  height: 609px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -496,14 +503,17 @@ ol {
 }
 
 .contact-form-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .contact-form-checkbox-text {
   font-family: inherit;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
@@ -519,7 +529,6 @@ ol {
   border: 2px solid var(--title-text-color);
   cursor: pointer;
   margin-right: 9px;
-  margin-left: 12px;
 }
 
 .contact-form-checkbox:focus + .contact-form-checkbox-text::before {
@@ -566,6 +575,25 @@ ol {
   background-color: var(--background-color-modal-btn);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .contact-form-checkbox-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .contact-form-checkbox-text::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  .contact-form-checkbox-text .contact-form-checkbox-text::before {
+    margin-left: 12px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .contact-form-footer {
     text-align: center;
@@ -591,6 +619,9 @@ ol {
     align-items: center;
     display: flex;
   }
+  .contact-form-footer {
+    width: 450px;
+  }
 }
 
 .contact-form-footer-subtitle {
@@ -605,7 +636,7 @@ ol {
 }
 
 .contact-form-input-footer {
-  width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -673,6 +704,9 @@ ol {
   .contact-form-footer {
     margin-top: 60px;
   }
+  .contact-form-input-footer {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -683,7 +717,6 @@ ol {
   }
   .contact-form-input-footer {
     display: inline-block;
-    width: 100%;
     height: 50px;
     width: 358px;
     margin-right: 12px;
@@ -816,19 +849,10 @@ ol {
   color: var(--accent-color);
 }
 
-.mobile-menu-social-media__item {
-  position: relative;
-}
-
-.separator::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  left: 90px;
-  top: 0;
-  background-color: var(--title-text-color);
-  border: 1px solid rgba(33, 33, 33, 0.2);
+.mobile-menu-social-media__item:not(:last-child) {
+  margin-right: 9px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .header-container {
@@ -952,6 +976,10 @@ ol {
   .contact-number {
     margin-left: 50px;
   }
+}
+
+.header.portfolio {
+  border: 1px solid var(--header-border-color);
 }
 
 .features__icon-wrapper {
@@ -1318,7 +1346,7 @@ ol {
   margin-right: auto;
   height: 400px;
   max-width: 480px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile-img/hero-mobile.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile-img/hero-mobile.jpg");
   background-color: var(--hero-bg-img-color);
   background-size: cover;
   background-position: center;
@@ -1353,7 +1381,7 @@ ol {
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile-img/hero-mobile@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-img/hero-mobile@2x.jpg);
   }
 }
 
@@ -1361,13 +1389,13 @@ ol {
   .hero {
     height: 400px;
     max-width: 768px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet-img/hero-tablet img.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet-img/hero-tablet img.jpg");
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet-img/hero-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet-img/hero-tablet@2x.jpg");
   }
 }
 
@@ -1375,13 +1403,13 @@ ol {
   .hero {
     height: 600px;
     max-width: 1600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@2x.jpg");
   }
 }
 /*# sourceMappingURL=main.css.map */
