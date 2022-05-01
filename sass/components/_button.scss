@@ -4,41 +4,18 @@
   justify-content: center;
 }
 
+.portfolio-list:not(:last-child) {
+  margin-right: 8px;
+}
+
 @media screen and (max-width: 767px) {
   .portfolio-list {
-    margin-right: 8px;
     margin-bottom: 15px;
-    flex-basis: calc((100% - (2 * 8px)) / 3);
   }
   .button-navigation {
     justify-content: start;
-    margin-right: -8px;
-    margin-bottom: -15px;
   }
 }
-
-ul
-// .portfolio {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-right: -30px;
-//   margin-bottom: -30px;
-// }
-li
-// .portfolio-item {
-//   margin-right: 30px;
-//   margin-bottom: 30px;
-//   @media screen and (max-width: 767px) {
-//     width: 450px;
-//   }
-// }
-// flex-basis: calc((100% - (2 * 30px)) / 2);
-
-
-
-// .button-navigation .portfolio-list:not(:last-child) {
-//   margin-right: 8px;
-// }
 
 .portfolio-button-nav {
   font-family: inherit;
