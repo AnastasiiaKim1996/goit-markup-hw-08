@@ -7,6 +7,9 @@
   position: relative;
   padding: 0;
 }
+.header.portfolio {
+  border: 1px solid var(--header-border-color);
+}
 
 .mobile-menu-btn {
   background-color: transparent;
@@ -126,8 +129,4 @@
   .contact-number {
     margin-left: 50px;
   }
-}
-
-.header.portfolio {
-  border: 1px solid var(--header-border-color);
 }
