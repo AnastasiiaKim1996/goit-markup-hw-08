@@ -5,12 +5,12 @@
   margin-bottom: 42px;
 }
 
-.portfolio-list:not(:last-child) {
+.portfolio-btn-list:not(:last-child) {
   margin-right: 8px;
 }
 
 @media screen and (max-width: 767px) {
-  .portfolio-list {
+  .portfolio-btn-list {
     margin-bottom: 15px;
   }
   .button-navigation {
