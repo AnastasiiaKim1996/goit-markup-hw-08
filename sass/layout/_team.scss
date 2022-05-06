@@ -1,7 +1,5 @@
 .team__img {
   width: 100%;
-  max-width: 370px;
-  height: 294px;
 }
 
 .section-team {
@@ -18,8 +16,7 @@
 }
 
 .team {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .team-title {
@@ -51,12 +48,20 @@
     padding-left: 74px;
     padding-right: 74px;
   }
+
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .team__member:nth-child(2n-1) {
     margin-right: 30px;
   }
+
   .team__member:nth-last-child(-n + 2) {
     margin-bottom: 30px;
   }
+
   .team__member {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -66,9 +71,11 @@
   .team__member {
     flex-basis: calc((100% - 90px) / 4);
   }
+
   .team__member:not(:last-child) {
     margin-right: 30px;
   }
+
   .member-content-wraper {
     padding: 30px 32px;
   }

@@ -1098,8 +1098,6 @@ img {
 
 .team__img {
   width: 100%;
-  max-width: 370px;
-  height: 294px;
 }
 
 .section-team {
@@ -1115,8 +1113,7 @@ img {
 }
 
 .team {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .team-title {
@@ -1147,6 +1144,10 @@ img {
   .member-content-wraper {
     padding-left: 74px;
     padding-right: 74px;
+  }
+  .team {
+    display: flex;
+    flex-wrap: wrap;
   }
   .team__member:nth-child(2n-1) {
     margin-right: 30px;
