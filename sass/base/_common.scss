@@ -35,7 +35,11 @@ ol {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+  .section.section-company {
+    padding-top: 0;
+  }
 }
+
 .site-nav .site-nav__link.current {
   color: var(--accent-color);
 }
