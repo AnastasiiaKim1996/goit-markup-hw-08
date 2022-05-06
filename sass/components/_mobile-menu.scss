@@ -74,14 +74,14 @@
   margin-bottom: 32px;
 }
 
-.mobile-menu-contact__item:not(:last-child) {
+.mob-menu-contact__number {
   margin-bottom: 32px;
 }
 
 .mobile-menu-contact__link.contact-number {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 10vw;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--accent-color);
@@ -98,10 +98,10 @@
 
 .mobile-menu-social-media {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mobile-menu-social-media__link {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
@@ -114,6 +114,11 @@
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
+
+.mobile-menu-social-media__item {
+  margin-bottom: 15px;
+}
+
 .mobile-menu-contact {
   margin-bottom: 64px;
 }

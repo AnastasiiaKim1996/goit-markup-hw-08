@@ -84,27 +84,26 @@ img {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100vw;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -200,22 +199,9 @@ img {
   fill: var(--primary-background-color);
 }
 
-@media screen and (max-width: 1999px) {
-  .clients-icon {
-    flex-wrap: wrap;
-  }
-}
-
 .clients-icon {
+  flex-wrap: wrap;
   display: flex;
-  margin-right: -30px;
-  margin-bottom: -30px;
-}
-
-.clients-icon__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  flex-basis: calc((100% - 60px) / 2);
 }
 
 .clients-icon__link {
@@ -240,26 +226,43 @@ img {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients-icon__item {
+    margin: 15px;
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  .clients-icon {
+    margin: -15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clients-icon__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  .clients-icon__item:nth-child(2n-1) {
+    margin-right: 30px;
+  }
+  .clients-icon__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .clients-icon__link {
     width: 226px;
   }
-  .clients-icon__item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    flex-basis: calc((100% - 90px) / 3);
-  }
 }
 
 @media screen and (min-width: 1200px) {
-  .clients-icon {
-    justify-content: space-between;
-  }
   .clients-icon__link {
     width: 170px;
   }
+  .clients-icon__item:not(:last-child) {
+    margin-right: 30px;
+  }
   .clients-icon__item {
-    flex-basis: calc((100% - 180px) / 6);
+    flex-basis: calc((100% - 150px) / 6);
   }
 }
 
@@ -295,6 +298,7 @@ img {
 
 .main-title {
   font-family: "Roboto";
+  text-transform: uppercase;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.2;
@@ -306,14 +310,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .main-title {
-    font-weight: 900;
     font-size: 44px;
     line-height: 1.37;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--primary-background-color);
-    margin-bottom: 30px;
   }
 }
 
@@ -327,9 +325,14 @@ img {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .section-title {
     font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
     margin-bottom: 50px;
   }
 }
@@ -800,14 +803,14 @@ img {
   margin-bottom: 32px;
 }
 
-.mobile-menu-contact__item:not(:last-child) {
+.mob-menu-contact__number {
   margin-bottom: 32px;
 }
 
 .mobile-menu-contact__link.contact-number {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 10vw;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--accent-color);
@@ -824,10 +827,10 @@ img {
 
 .mobile-menu-social-media {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mobile-menu-social-media__link {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
@@ -839,6 +842,10 @@ img {
   margin-right: 9px;
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu-social-media__item {
+  margin-bottom: 15px;
 }
 
 .mobile-menu-contact {
@@ -854,6 +861,10 @@ img {
 .header {
   position: relative;
   padding: 0;
+}
+
+.header.portfolio {
+  border: 1px solid var(--header-border-color);
 }
 
 .mobile-menu-btn {
@@ -967,10 +978,6 @@ img {
   }
 }
 
-.header.portfolio {
-  border: 1px solid var(--header-border-color);
-}
-
 .features__icon-wrapper {
   max-width: 450px;
   height: 120px;
@@ -1005,8 +1012,15 @@ img {
   color: var(--primary-text-color);
 }
 
-.features .features__item:not(:last-child) {
-  margin-bottom: 30px;
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1199px) {
+  .features__item:not(:nth-child(n + 2)) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1020,30 +1034,20 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .features__icon-wrapper {
-    width: 354px;
-    height: 120px;
-  }
-  .features {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -30px;
-    margin-bottom: -30px;
+  .features__item:nth-child(2n-1) {
+    margin-right: 30px;
   }
   .features__item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    flex-basis: calc((100% - 60px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .features__icon-wrapper {
-    width: 270px;
-    height: 120px;
-  }
   .features__item {
-    flex-basis: calc((100% - 120px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .features__item:not(:last-child) {
+    margin-right: 30px;
   }
   .features-section {
     padding-top: 94px;
@@ -1094,7 +1098,8 @@ img {
 
 .team__img {
   width: 100%;
-  height: 100%;
+  max-width: 370px;
+  height: 294px;
 }
 
 .section-team {
@@ -1105,11 +1110,13 @@ img {
   background: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  padding-top: 16px;
-  padding-bottom: 24px;
-  padding-left: 122px;
-  padding-right: 122px;
+  padding: 30px 32px;
   border-top: none;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .team-title {
@@ -1132,11 +1139,8 @@ img {
 }
 
 .team__member {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.team .team__member:not(:last-child) {
   margin-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 768px) {
@@ -1144,37 +1148,26 @@ img {
     padding-left: 74px;
     padding-right: 74px;
   }
-  .team {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -30px;
-    margin-bottom: -30px;
+  .team__member:nth-child(2n-1) {
+    margin-right: 30px;
+  }
+  .team__member:nth-last-child(-n + 2) {
+    margin-bottom: 30px;
   }
   .team__member {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    flex-basis: calc((100% - 60px) / 2);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
-  .team__img {
-    max-width: 354px;
-    height: 374px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team__member {
-    flex-basis: calc((100% - 120px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
   }
-  .team__img {
-    max-width: 270px;
-    height: 260px;
+  .team__member:not(:last-child) {
+    margin-right: 30px;
   }
   .member-content-wraper {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 30px 32px;
   }
 }
 
@@ -1182,6 +1175,8 @@ img {
   position: relative;
   overflow: hidden;
   height: 100%;
+  box-sizing: content-box;
+  width: 100%;
 }
 
 .portfolio-img {
@@ -1191,13 +1186,10 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
 }
 
 .portfolio-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1209,7 +1201,6 @@ img {
 .portfolio-content-wraper {
   background: var(--primary-background-color);
   border: 1px solid var(--content-border-color);
-  box-sizing: border-box;
   padding: 20px 24px;
   border-top: none;
 }
@@ -1262,13 +1253,16 @@ img {
   transform: translateY(0%);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-content-wraper.tablet-wrapper {
+    padding-bottom: 54px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .portfolio-item {
     flex-basis: calc((100% - (2 * 30px)) / 2);
     width: 354px;
-  }
-  .portfolio-content-wraper.tablet-wrapper {
-    padding-bottom: 54px;
   }
 }
 

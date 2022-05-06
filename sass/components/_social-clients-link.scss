@@ -1,18 +1,6 @@
-@media screen and (max-width: 1999px) {
-  .clients-icon {
-    flex-wrap: wrap;
-  }
-}
-
 .clients-icon {
+  flex-wrap: wrap;
   display: flex;
-  margin-right: -30px;
-  margin-bottom: -30px;
-}
-.clients-icon__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  flex-basis: calc((100% - 60px) / 2);
 }
 
 .clients-icon__link {
@@ -39,25 +27,46 @@
   fill: currentColor;
 }
 
+//---max-width---//
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients-icon__item {
+    margin: 15px;
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  .clients-icon {
+    margin: -15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clients-icon__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  .clients-icon__item:nth-child(2n-1) {
+    margin-right: 30px;
+  }
+  .clients-icon__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+//---min-width---//
+
 @media screen and (min-width: 768px) {
   .clients-icon__link {
     width: 226px;
   }
-  .clients-icon__item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    flex-basis: calc((100% - 90px) / 3);
-  }
 }
 
 @media screen and (min-width: 1200px) {
-  .clients-icon {
-    justify-content: space-between;
-  }
   .clients-icon__link {
     width: 170px;
   }
+  .clients-icon__item:not(:last-child) {
+    margin-right: 30px;
+  }
   .clients-icon__item {
-    flex-basis: calc((100% - 180px) / 6);
+    flex-basis: calc((100% - 150px) / 6);
   }
 }
