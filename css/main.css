@@ -1175,8 +1175,6 @@ img {
   position: relative;
   overflow: hidden;
   height: 100%;
-  box-sizing: content-box;
-  width: 100%;
 }
 
 .portfolio-img {
@@ -1270,6 +1268,10 @@ img {
   .portfolio-item {
     flex-basis: calc((100% - 90px) / 3);
     width: 370px;
+  }
+  .portfolio-list-img-wrapper {
+    box-sizing: content-box;
+    width: 100%;
   }
 }
 
