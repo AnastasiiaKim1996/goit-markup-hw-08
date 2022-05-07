@@ -89,7 +89,6 @@ img {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  width: 100vw;
 }
 
 @media screen and (min-width: 480px) {
@@ -107,6 +106,7 @@ img {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+    width: 100vw;
   }
 }
 
