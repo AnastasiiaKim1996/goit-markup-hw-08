@@ -136,48 +136,48 @@
     <main>
       <section class="portfolio-section section">
         <div class="container">
-          <ul class="button-navigation">
+          <ul class="button-navigation filter">
             <li class="portfolio-btn-list">
               <button
-                class="portfolio-button-nav filter__btn--active"
                 type="button"
-                data-all
+                data-filter="all"
+                class="portfolio-button-nav button-current filter__btn--active"
               >
                 Все
               </button>
             </li>
             <li class="portfolio-btn-list">
               <button
-                class="portfolio-button-nav filter__btn--active"
                 type="button"
-                data-site
+                data-filter="site"
+                class="portfolio-button-nav filter__btn--active"
               >
                 Веб-сайты
               </button>
             </li>
             <li class="portfolio-btn-list">
               <button
-                class="portfolio-button-nav filter__btn--active"
                 type="button"
-                data-app
+                data-filter="app"
+                class="portfolio-button-nav filter__btn--active"
               >
                 Приложения
               </button>
             </li>
             <li class="portfolio-btn-list">
               <button
-                class="portfolio-button-nav filter__btn--active"
                 type="button"
-                data-design
+                data-filter="design"
+                class="portfolio-button-nav filter__btn--active"
               >
                 Дизайн
               </button>
             </li>
             <li class="portfolio-btn-list">
               <button
-                class="portfolio-button-nav filter__btn--active"
                 type="button"
-                data-mark
+                data-filter="mark"
+                class="portfolio-button-nav filter__btn--active"
               >
                 Маркетинг
               </button>
@@ -189,7 +189,7 @@
           <!--Портфолио-->
 
           <ul class="portfolio-list list">
-            <li class="portfolio-item" data-item-site>
+            <li class="portfolio-item site">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -260,7 +260,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-design>
+            <li class="portfolio-item design">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -334,7 +334,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-app>
+            <li class="portfolio-item app">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -406,7 +406,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-mark>
+            <li class="portfolio-item mark">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -477,7 +477,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-app>
+            <li class="portfolio-item app">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -548,7 +548,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-site>
+            <li class="portfolio-item site">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -620,7 +620,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-design>
+            <li class="portfolio-item design">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -691,7 +691,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-mark>
+            <li class="portfolio-item mark">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -762,7 +762,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio-item" data-item-app>
+            <li class="portfolio-item app">
               <a class="portfolio-link" href="">
                 <div class="portfolio-list-img-wrapper">
                   <picture>
@@ -926,9 +926,8 @@
       </div>
     </footer>
 
-    <!--скрипт-->
+    <script src="./js/main.js"></script>
 
-    <script src="./js/filter.js"></script>
     <script src="./js/menu.js"></script>
   </body>
 </html>
